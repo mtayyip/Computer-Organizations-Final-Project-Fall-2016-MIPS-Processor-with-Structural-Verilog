@@ -1,0 +1,32 @@
+module ControlUnit_testbench();
+
+reg [5:0] Instr;
+wire RegDst;
+wire Branch;
+wire MemRead;
+wire MemtoReg; 
+wire [3:0] ALUOp;
+wire MemWrite;
+wire ALUSrc;
+wire RegWrite;
+
+
+
+ControlUnit foo (RegDst,Branch,MemRead,MemtoReg,ALUOp,MemWrite,ALUSrc,RegWrite,Instr);
+
+initial begin 
+	Instr=6'b000000;
+	#20;
+	Instr=6'b100011;
+	#20;
+	Instr=6'b101011;
+	#20;
+	Instr=6'b000100;
+	#20;	
+end
+
+initial begin 
+	$monitor("Inst : %6b, regDst : %1b, ALUSrc : %1b ,memtoReg : %1b  ,RegWrite :%1b,  memRead : %1b ,MemWrite :%1b , branch : %1b,ALUOp :%4b  ,", 
+				Instr,RegDst,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp,);
+end
+endmodule

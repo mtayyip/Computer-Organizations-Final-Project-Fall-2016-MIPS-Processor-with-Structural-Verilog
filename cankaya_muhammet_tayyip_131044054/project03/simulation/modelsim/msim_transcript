@@ -1,0 +1,2410 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do project03_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+# vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+# 
+vlog -reportprogress 300 -work work C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Warning: (vsim-3015) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(54): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'write_reg'. The port definition is at: C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v(5).
+# 
+#         Region: /mips_testbench/foo/functionReg
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC :   0 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   1 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   2 , signExtented :  32,ALUresult<<2  : 152 , Rs  19 ,Rt :  19 ,Rd   0,read_Data   7 ,writeData:  38,ALUresult  38 
+# PC :   3 , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# PC :   x , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# Error opening C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/simulation/modelsim/[PCDPC] - Port size (5 or 5) does not match connection size 
+# Path name 'C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/simulation/modelsim/[PCDPC] - Port size (5 or 5) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Warning: (vsim-3015) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(54): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'write_reg'. The port definition is at: C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v(5).
+# 
+#         Region: /mips_testbench/foo/functionReg
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC :   0 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   1 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   2 , signExtented :  32,ALUresult<<2  : 152 , Rs  19 ,Rt :  19 ,Rd   0,read_Data   7 ,writeData:  38,ALUresult  38 
+# PC :   3 , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# PC :   x , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Warning: (vsim-3015) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(54): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'write_reg'. The port definition is at: C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v(5).
+# 
+#         Region: /mips_testbench/foo/functionReg
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC :   0 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   1 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   2 , signExtented :  32,ALUresult<<2  : 152 , Rs  19 ,Rt :  19 ,Rd   0,read_Data   7 ,writeData:  38,ALUresult  38 
+# PC :   3 , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# PC :   x , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC :   0 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   1 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   2 , signExtented :  32,ALUresult<<2  : 152 , Rs  19 ,Rt :  19 ,Rd   0,read_Data   7 ,writeData:  38,ALUresult  38 
+# PC :   3 , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# PC :   x , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC :   0 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   1 , signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   3,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   2 , signExtented :  32,ALUresult<<2  : 152 , Rs  19 ,Rt :  19 ,Rd   0,read_Data   7 ,writeData:  38,ALUresult  38 
+# PC :   3 , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# PC :   x , signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC :   0 , newRd :   3 ,Rd_Rt_R31:   3,signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   0,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   1 , newRd :   3 ,Rd_Rt_R31:   3,signExtented :   1,ALUresult<<2  :   8 , Rs   1 ,Rt :   3 ,Rd   0,read_Data   7 ,writeData:   7,ALUresult   2 
+# PC :   2 , newRd :   0 ,Rd_Rt_R31:   0,signExtented :  32,ALUresult<<2  : 152 , Rs  19 ,Rt :  19 ,Rd   0,read_Data   7 ,writeData:  38,ALUresult  38 
+# PC :   3 , newRd :   x ,Rd_Rt_R31:   x,signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+# PC :   x , newRd :   x ,Rd_Rt_R31:   x,signExtented :   x,ALUresult<<2  :   X , Rs   x ,Rt :   x ,Rd   x,read_Data   7 ,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data  7,writeData:  7,ALUresult   2 
+# PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data  7,writeData:  7,ALUresult   2 
+# PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2: 38,Rs: 19,Rt: 19,Rd  0,read_Data  7,writeData: 38,ALUresult  38 
+# PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data  7,writeData:  x,ALUresult   x 
+# PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data  7,writeData:  x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data  7,writeData:   7,ALUresult   2 
+# Regwr :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data  7,writeData:   7,ALUresult   2 
+# Regwr :  1,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2:152,Rs: 19,Rt: 19,Rd  0,read_Data  7,writeData:  38,ALUresult  38 
+# Regwr :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data  7,writeData:   x,ALUresult   x 
+# Regwr :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data  7,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data  7,writeData:   7,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data  7,writeData:   7,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2:152,Rs: 19,Rt: 19,Rd  0,read_Data  7,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data  7,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data  7,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2:152,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -reportprogress 300 -work work C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -reportprogress 300 -work work C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -reportprogress 300 -work work C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2:152,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  X,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Warning: (vsim-3015) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(43): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'mem_address'. The port definition is at: C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v(1).
+# 
+#         Region: /mips_testbench/foo/functionData
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  0,Rs:  1,Rt:  3,Rd  0,read_Data  x,writeData:   x,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  0,Rs:  1,Rt:  3,Rd  0,read_Data  x,writeData:   x,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2:  0,Rs: 19,Rt: 19,Rd  0,read_Data  x,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data  x,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data  x,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  0,memtoReg :  0,PC:  0,newRd:  5,Rd_Rt_R31:  5,signExtented:  1,ALUresult<<2:  3,Rs: 11,Rt:  5,Rd  0,read_Data  x,writeData:  12,ALUresult  12 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2>>:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2>>:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regdst :  0,jump :  0,branch :  0,MemRead :  1,MemtoReg :  1,ALUOpSignal :  0,MemWrite :  0,ALUSrc :  1,RegWrite :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regdst :  0,jump :  0,branch :  0,MemRead :  1,MemtoReg :  1,ALUOpSignal :  0,MemWrite :  0,ALUSrc :  1,RegWrite :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regdst :  1,jump :  0,branch :  0,MemRead :  0,MemtoReg :  0,ALUOpSignal :  2,MemWrite :  0,ALUSrc :  0,RegWrite :  1,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regdst :  x,jump :  x,branch :  x,MemRead :  x,MemtoReg :  x,ALUOpSignal :  X,MemWrite :  x,ALUSrc :  x,RegWrite :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2>>:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regdst :  x,jump :  x,branch :  x,MemRead :  x,MemtoReg :  x,ALUOpSignal :  X,MemWrite :  x,ALUSrc :  x,RegWrite :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2>>:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  x,memtoReg :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2>>:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+# Regwr :  x,memtoReg :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2>>:  x,Rs:  x,Rt:  x,Rd  x,read_Data 15,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# content2   3,Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# content2  15,Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,read_Data 15,writeData:  15,ALUresult   2 
+# content2  19,Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,read_Data 15,writeData:  38,ALUresult  38 
+# content2  38,Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# content2   0,Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# content2   0,Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# content2   0,Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+# content2   0,Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,read_Data 15,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,content1  19,content2  19,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1  38,content2  38,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31: 15,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  4,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2  15,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# A time value could not be extracted from the current line
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31: 15,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31: 15,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  4,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   3,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  1,PC:  3,newRd:  3,Rd_Rt_R31:  4,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   3,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,content1  19,content2  19,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1  38,content2  38,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented: 32,ALUresult<<2>>: 38,Rs: 19,Rt: 19,Rd  0,content1  19,content2  19,read_Data 15,writeData:  38,ALUresult  38 
+# Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1  38,content2  38,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data 15,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2  15,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  1,PC:  3,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   4,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:511,ALUresult<<2>>:2048,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data  x,writeData:   X,ALUresult 512 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   X,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  1,PC:  3,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   4,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented: 29,ALUresult<<2>>:120,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data 30,writeData:  30,ALUresult  30 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2  30,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  1,PC:  3,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   4,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  2,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data  0,writeData: 65536,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2 65536,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  1,PC:  3,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   4,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# Regwr :  1,memtoReg :  1,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2>>:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data 15,writeData:  15,ALUresult   2 
+# Regwr :  1,memtoReg :  1,PC:  1,newRd:  3,Rd_Rt_R31:  3,signExtented: 29,ALUresult<<2>>:120,Rs:  1,Rt:  3,Rd  0,content1   1,content2  15,read_Data 30,writeData:  30,ALUresult  30 
+# Regwr :  1,memtoReg :  1,PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2  30,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  1,PC:  3,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2>>: 16,Rs:  2,Rt:  3,Rd  0,content1   2,content2   4,read_Data  4,writeData:   4,ALUresult   4 
+# Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+# Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2>>:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  4,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# MemWrite:  1,Regwr :  0,memtoReg :  0,PC:  0,newRd:  3,Rd_Rt_R31:  3,signExtented:  1,ALUresult<<2:  8,Rs:  1,Rt:  3,Rd  0,content1   1,content2   3,read_Data  x,writeData:   2,ALUresult   2 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  1,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  4,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  5,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  6,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,memtoReg :  0,PC:  7,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# MemWrite:  1,Regwr :  0,PC:  0,newRd:  0,Rd_Rt_R31:  7,signExtented:  7,ALUresult<<2:  3,Rs: 16,Rt:  1,Rd  7,content1   0,content2   1,read_Data  7,writeData:   x,ALUresult   4          4
+# MemWrite:  x,Regwr :  x,PC:  x,newRd:  1,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  x,writeData:   x,ALUresult   x          x
+# MemWrite:  x,Regwr :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  x,writeData:   x,ALUresult   x          x
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# MemWrite:  1,Regwr :  0,PC:  0,newRd:  7,Rd_Rt_R31:  7,signExtented:  3,ALUresult<<2: 16,Rs:  1,Rt:  7,Rd  0,content1   1,content2   7,read_Data  x,writeData:   4,ALUresult   4 
+# MemWrite:  x,Regwr :  x,PC:  1,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  x,writeData:   x,ALUresult   x 
+# MemWrite:  x,Regwr :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  x,writeData:   x,ALUresult   x 
+vsim work.PCUnit
+# vsim work.PCUnit 
+# Loading work.PCUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# MemWrite:  1,Regwr :  0,PC:  0,newRd:  7,Rd_Rt_R31:  7,signExtented:  3,ALUresult<<2: 16,Rs:  1,Rt:  7,Rd  0,content1   1,content2   7,read_Data  x,writeData:   4,ALUresult   4 
+# MemWrite:  0,Regwr :  1,PC:  1,newRd:  0,Rd_Rt_R31:  0,signExtented:  2,ALUresult<<2: 16,Rs:  2,Rt:  0,Rd  0,content1   2,content2   0,read_Data  7,writeData:   7,ALUresult   4 
+# MemWrite:  x,Regwr :  x,PC:  2,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  7,writeData:   x,ALUresult   x 
+# MemWrite:  x,Regwr :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  7,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# MemWrite:  1,Regwr :  0,PC:  0,newRd:  7,Rd_Rt_R31:  7,signExtented:  3,ALUresult<<2: 16,Rs:  1,Rt:  7,Rd  0,content1   1,content2   7,read_Data  x,writeData:   4,ALUresult   4 
+# MemWrite:  0,Regwr :  1,PC:  1,newRd:  0,Rd_Rt_R31:  0,signExtented:  2,ALUresult<<2: 16,Rs:  2,Rt:  0,Rd  0,content1   2,content2   0,read_Data  7,writeData:   7,ALUresult   4 
+# MemWrite:  0,Regwr :  1,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented:  2,ALUresult<<2: 16,Rs:  2,Rt:  0,Rd  0,content1   2,content2   7,read_Data  7,writeData:   7,ALUresult   4 
+# MemWrite:  x,Regwr :  x,PC:  3,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  7,writeData:   x,ALUresult   x 
+# MemWrite:  x,Regwr :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  7,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# MemWrite:  1,Regwr :  0,PC:  0,newRd: 31,Rd_Rt_R31: 31,signExtented:  3,ALUresult<<2: 16,Rs:  1,Rt: 31,Rd  0,content1   1,content2  31,read_Data  x,writeData:   4,ALUresult   4 
+# MemWrite:  0,Regwr :  1,PC:  1,newRd:  0,Rd_Rt_R31:  0,signExtented:  0,ALUresult<<2:  0,Rs:  0,Rt:  0,Rd  0,content1   0,content2   0,read_Data  x,writeData:   0,ALUresult   0 
+# MemWrite:  0,Regwr :  1,PC:  2,newRd:  0,Rd_Rt_R31:  0,signExtented:  2,ALUresult<<2: 16,Rs:  2,Rt:  0,Rd  0,content1   2,content2   0,read_Data 31,writeData:  31,ALUresult   4 
+# MemWrite:  0,Regwr :  1,PC:  3,newRd:  0,Rd_Rt_R31:  0,signExtented:  2,ALUresult<<2: 16,Rs:  2,Rt:  0,Rd  0,content1   2,content2  31,read_Data 31,writeData:  31,ALUresult   4 
+# MemWrite:  x,Regwr :  x,PC:  4,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data 31,writeData:   x,ALUresult   x 
+# MemWrite:  x,Regwr :  x,PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data 31,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,newRd:  1,Rd_Rt_R31:  1,signExtented:2080,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  1,content1   1,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  1,newRd:  2,Rd_Rt_R31:  2,signExtented:  0,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  0,content1   3,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  0,ALUresult<<2:  3,Rs:  1,Rt:  3,Rd  0,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  3,newRd:  4,Rd_Rt_R31:  4,signExtented:8225,ALUresult<<2:  6,Rs:  1,Rt:  2,Rd  4,content1   3,content2   3,read_Data  x,writeData:   6,ALUresult   6 
+# PC:  4,newRd:  5,Rd_Rt_R31:  5,signExtented:10276,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  5,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  5,newRd:  6,Rd_Rt_R31:  6,signExtented:  0,ALUresult<<2:  0,Rs:  1,Rt:  6,Rd  0,content1   3,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC:  6,newRd:  7,Rd_Rt_R31:  7,signExtented:  0,ALUresult<<2: 12,Rs:  1,Rt:  7,Rd  0,content1   3,content2   7,read_Data  3,writeData:   3,ALUresult   3 
+# PC:  7,newRd:  8,Rd_Rt_R31:  8,signExtented:16423,ALUresult<<2:  x,Rs:  1,Rt:  2,Rd  8,content1   3,content2   3,read_Data  3,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,newRd:  1,Rd_Rt_R31:  1,signExtented:2080,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  1,content1   1,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  1,newRd:  2,Rd_Rt_R31:  2,signExtented:  0,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  0,content1   3,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  0,ALUresult<<2:  3,Rs:  1,Rt:  3,Rd  0,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  3,newRd:  4,Rd_Rt_R31:  4,signExtented:8225,ALUresult<<2:  6,Rs:  1,Rt:  2,Rd  4,content1   3,content2   3,read_Data  x,writeData:   6,ALUresult   6 
+# PC:  4,newRd:  5,Rd_Rt_R31:  5,signExtented:10276,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  5,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  5,newRd:  6,Rd_Rt_R31:  6,signExtented:  0,ALUresult<<2:  0,Rs:  1,Rt:  6,Rd  0,content1   3,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC:  6,newRd:  7,Rd_Rt_R31:  7,signExtented:  0,ALUresult<<2: 12,Rs:  1,Rt:  7,Rd  0,content1   3,content2   7,read_Data  3,writeData:   3,ALUresult   3 
+# PC:  7,newRd:  8,Rd_Rt_R31:  8,signExtented:16423,ALUresult<<2:  x,Rs:  1,Rt:  2,Rd  8,content1   3,content2   3,read_Data  3,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,newRd:  1,Rd_Rt_R31:  1,signExtented:2080,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  1,content1   1,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  1,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  x,writeData:   x,ALUresult   x 
+# PC:  x,newRd:  x,Rd_Rt_R31:  x,signExtented:  x,ALUresult<<2:  x,Rs:  x,Rt:  x,Rd  x,content1   x,content2   x,read_Data  x,writeData:   x,ALUresult   x 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,newRd:  1,Rd_Rt_R31:  1,signExtented:2080,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  1,content1   1,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  1,newRd:  2,Rd_Rt_R31:  2,signExtented:  0,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  0,content1   3,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  2,newRd:  3,Rd_Rt_R31:  3,signExtented:  0,ALUresult<<2:  3,Rs:  1,Rt:  3,Rd  0,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  3,newRd:  4,Rd_Rt_R31:  4,signExtented:8225,ALUresult<<2:  6,Rs:  1,Rt:  2,Rd  4,content1   3,content2   3,read_Data  x,writeData:   6,ALUresult   6 
+# PC:  4,newRd:  5,Rd_Rt_R31:  5,signExtented:10276,ALUresult<<2:  3,Rs:  1,Rt:  2,Rd  5,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  5,newRd:  6,Rd_Rt_R31:  6,signExtented:  0,ALUresult<<2:  0,Rs:  1,Rt:  6,Rd  0,content1   3,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC:  6,newRd:  4,Rd_Rt_R31:  4,signExtented:  4,ALUresult<<2:  0,Rs:  4,Rt:  4,Rd  0,content1   6,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC: 11,newRd:  3,Rd_Rt_R31:  3,signExtented:  2,ALUresult<<2: 20,Rs:  1,Rt:  3,Rd  0,content1   3,content2   3,read_Data  5,writeData:   5,ALUresult   5 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Error: (vsim-PLI-3947) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(78): $monitor : Invalid format specifier ' '.
+# 
+#         Region: /mips_testbench
+# Error loading design
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Error: (vsim-PLI-3947) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(77): $monitor : Invalid format specifier ' '.
+# 
+#         Region: /mips_testbench
+# Error loading design
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Error: (vsim-PLI-3947) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(78): $monitor : Invalid format specifier ' '.
+# 
+#         Region: /mips_testbench
+# Error loading design
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+# ** Error: (vsim-PLI-3947) C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v(78): $monitor : Invalid format specifier ' '.
+# 
+#         Region: /mips_testbench
+# Error loading design
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented:2080,Rs:  1,Rt:  2,Rd  1,content1   1,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  1,signExtented:  0,Rs:  1,Rt:  2,Rd  2,content1   3,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  2,signExtented:  0,Rs:  1,Rt:  3,Rd  3,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  3,signExtented:8225,Rs:  1,Rt:  2,Rd  4,content1   3,content2   3,read_Data  x,writeData:   6,ALUresult   6 
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd  5,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  5,signExtented:  0,Rs:  1,Rt:  6,Rd  6,content1   3,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC:  6,signExtented:  4,Rs:  4,Rt:  4,Rd  4,content1   6,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC: 11,signExtented:  2,Rs:  1,Rt:  3,Rd  3,content1   3,content2   3,read_Data  5,writeData:   5,ALUresult   5 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented: 2080,Rs:  1,Rt:  2,Rd  1,content1   1,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  1,signExtented:    0,Rs:  1,Rt:  2,Rd  2,content1   3,content2   2,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  2,signExtented:    0,Rs:  1,Rt:  3,Rd  3,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  3,signExtented: 8225,Rs:  1,Rt:  2,Rd  4,content1   3,content2   3,read_Data  x,writeData:   6,ALUresult   6 
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd  5,content1   3,content2   3,read_Data  x,writeData:   3,ALUresult   3 
+# PC:  5,signExtented:    0,Rs:  1,Rt:  6,Rd  6,content1   3,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC:  6,signExtented:    4,Rs:  4,Rt:  4,Rd  4,content1   6,content2   6,read_Data  x,writeData:   0,ALUresult   0 
+# PC: 11,signExtented:    2,Rs:  1,Rt:  3,Rd  3,content1   3,content2   3,read_Data  5,writeData:   5,ALUresult   5 
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented: 2080,Rs:  1,Rt:  2,Rd:  1,content1:  1,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  1,signExtented:    0,Rs:  1,Rt:  2,Rd:  2,content1:  3,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  2,signExtented:    0,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  3,signExtented: 8225,Rs:  1,Rt:  2,Rd:  4,content1:  3,content2:  3,read_Data:  x,writeData:  6,ALUresult:  6
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd:  5,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  5,signExtented:    0,Rs:  1,Rt:  6,Rd:  6,content1:  3,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC:  6,signExtented:    4,Rs:  4,Rt:  4,Rd:  4,content1:  6,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC: 11,signExtented:    2,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  5,writeData:  5,ALUresult:  5
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented: 2080,Rs:  1,Rt:  2,Rd:  1,content1:  1,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  1,signExtented:    0,Rs:  1,Rt:  2,Rd:  2,content1:  3,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  2,signExtented:    0,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  3,signExtented: 8225,Rs:  1,Rt:  2,Rd:  4,content1:  3,content2:  3,read_Data:  x,writeData:  6,ALUresult:  6
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd:  5,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  5,signExtented:    0,Rs:  1,Rt:  6,Rd:  6,content1:  3,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC:  6,signExtented:    4,Rs:  4,Rt:  4,Rd:  4,content1:  6,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC: 11,signExtented:    2,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  5,writeData:  5,ALUresult:  5
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented: 2080,Rs:  1,Rt:  2,Rd:  1,content1:  1,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  1,signExtented:    0,Rs:  1,Rt:  2,Rd:  2,content1:  3,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  2,signExtented:    0,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  3,signExtented: 8225,Rs:  1,Rt:  2,Rd:  4,content1:  3,content2:  3,read_Data:  x,writeData:  6,ALUresult:  6
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd:  5,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  5,signExtented:    0,Rs:  1,Rt:  6,Rd:  6,content1:  3,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC:  6,signExtented:    4,Rs:  4,Rt:  4,Rd:  4,content1:  6,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC: 11,signExtented:    2,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  5,writeData:  5,ALUresult:  5
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented: 2080,Rs:  1,Rt:  2,Rd:  1,content1:  1,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  1,signExtented:    0,Rs:  1,Rt:  2,Rd:  2,content1:  3,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  2,signExtented:    0,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  3,signExtented: 8225,Rs:  1,Rt:  2,Rd:  4,content1:  3,content2:  3,read_Data:  x,writeData:  6,ALUresult:  6
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd:  5,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  5,signExtented:    0,Rs:  1,Rt:  6,Rd:  6,content1:  3,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC:  6,signExtented:    4,Rs:  4,Rt:  4,Rd:  4,content1:  6,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC: 11,signExtented:    2,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  5,writeData:  5,ALUresult:  5
+# PC: 12,signExtented:    3,Rs:  1,Rt:  4,Rd:  4,content1:  3,content2:  6,read_Data:  5,writeData:196608,ALUresult:  6
+# PC: 13,signExtented:    0,Rs:  1,Rt:  7,Rd:  7,content1:  3,content2:  7,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 14,signExtented:16423,Rs:  1,Rt:  2,Rd:  8,content1:  3,content2:  3,read_Data:  3,writeData:4294967292,ALUresult:4294967292
+# PC: 15,signExtented:18469,Rs:  1,Rt:  2,Rd:  9,content1:  3,content2:  3,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 16,signExtented:    0,Rs:  1,Rt: 10,Rd: 10,content1:  3,content2: 10,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 17,signExtented:22570,Rs:  1,Rt:  2,Rd: 11,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 18,signExtented:    0,Rs:  1,Rt: 12,Rd: 12,content1:  3,content2: 12,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 19,signExtented:    0,Rs:  1,Rt: 13,Rd: 13,content1:  3,content2: 13,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 20,signExtented:28715,Rs:  1,Rt:  2,Rd: 14,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 21,signExtented:30976,Rs:  1,Rt:  2,Rd: 15,content1:  3,content2:  3,read_Data:  3,writeData: 24,ALUresult: 24
+# PC: 22,signExtented:4294934786,Rs:  1,Rt:  2,Rd: 16,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 23,signExtented:    0,Rs:  1,Rt: 17,Rd: 17,content1:  3,content2: 17,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 24,signExtented:4294938658,Rs:  1,Rt:  2,Rd: 18,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 25,signExtented:4294940707,Rs:  1,Rt:  2,Rd: 19,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 26,signExtented:    3,Rs:  1,Rt: 31,Rd: 31,content1:  3,content2: 31,read_Data:  3,writeData:  6,ALUresult:  6
+# PC: 27,signExtented:    2,Rs:  2,Rt:  0,Rd:  0,content1:  3,content2:  0,read_Data:  5,writeData:  5,ALUresult:  5
+# PC: 28,signExtented:    2,Rs:  2,Rt:  0,Rd:  0,content1:  3,content2:  5,read_Data:  5,writeData:  5,ALUresult:  5
+# PC: 29,signExtented:    x,Rs:  x,Rt:  x,Rd:  x,content1:  x,content2:  x,read_Data:  5,writeData:  x,ALUresult:  x
+# PC:  x,signExtented:    x,Rs:  x,Rt:  x,Rd:  x,content1:  x,content2:  x,read_Data:  5,writeData:  x,ALUresult:  x
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -work work -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PCUnit
+# 
+# Top level modules:
+# 	PCUnit
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.PCUnit
+# Loading work.mips_instr_mem
+# Loading work.mips_data_mem
+# Loading work.mips_registers
+# Loading work.ControlUnit
+# Loading work.ALUControl
+# Loading work.ALU
+add wave -position end  sim:/mips_testbench/clock
+add wave -position end  sim:/mips_testbench/result
+step -current
+# PC:  0,signExtented: 2080,Rs:  1,Rt:  2,Rd:  1,content1:  1,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  1,signExtented:    0,Rs:  1,Rt:  2,Rd:  2,content1:  3,content2:  2,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  2,signExtented:    0,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  3,signExtented: 8225,Rs:  1,Rt:  2,Rd:  4,content1:  3,content2:  3,read_Data:  x,writeData:  6,ALUresult:  6
+# PC:  4,signExtented:10276,Rs:  1,Rt:  2,Rd:  5,content1:  3,content2:  3,read_Data:  x,writeData:  3,ALUresult:  3
+# PC:  5,signExtented:    0,Rs:  1,Rt:  6,Rd:  6,content1:  3,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC:  6,signExtented:    4,Rs:  4,Rt:  4,Rd:  4,content1:  6,content2:  6,read_Data:  x,writeData:  0,ALUresult:  0
+# PC: 11,signExtented:    2,Rs:  1,Rt:  3,Rd:  3,content1:  3,content2:  3,read_Data:  5,writeData:  5,ALUresult:  5
+# PC: 12,signExtented:    3,Rs:  1,Rt:  4,Rd:  4,content1:  3,content2:  6,read_Data:  5,writeData:196608,ALUresult:  6
+# PC: 13,signExtented:    0,Rs:  1,Rt:  7,Rd:  7,content1:  3,content2:  7,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 14,signExtented:16423,Rs:  1,Rt:  2,Rd:  8,content1:  3,content2:  3,read_Data:  3,writeData:4294967292,ALUresult:4294967292
+# PC: 15,signExtented:18469,Rs:  1,Rt:  2,Rd:  9,content1:  3,content2:  3,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 16,signExtented:    0,Rs:  1,Rt: 10,Rd: 10,content1:  3,content2: 10,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 17,signExtented:22570,Rs:  1,Rt:  2,Rd: 11,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 18,signExtented:    0,Rs:  1,Rt: 12,Rd: 12,content1:  3,content2: 12,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 19,signExtented:    0,Rs:  1,Rt: 13,Rd: 13,content1:  3,content2: 13,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 20,signExtented:28715,Rs:  1,Rt:  2,Rd: 14,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 21,signExtented:30976,Rs:  1,Rt:  2,Rd: 15,content1:  3,content2:  3,read_Data:  3,writeData: 24,ALUresult: 24
+# PC: 22,signExtented:4294934786,Rs:  1,Rt:  2,Rd: 16,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 23,signExtented:    0,Rs:  1,Rt: 17,Rd: 17,content1:  3,content2: 17,read_Data:  3,writeData:  3,ALUresult:  3
+# PC: 24,signExtented:4294938658,Rs:  1,Rt:  2,Rd: 18,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 25,signExtented:4294940707,Rs:  1,Rt:  2,Rd: 19,content1:  3,content2:  3,read_Data:  3,writeData:  0,ALUresult:  0
+# PC: 26,signExtented:    3,Rs:  1,Rt: 31,Rd: 31,content1:  3,content2: 31,read_Data:  3,writeData:  6,ALUresult:  6
+# PC: 27,signExtented:    2,Rs:  2,Rt:  0,Rd:  0,content1:  3,content2:  0,read_Data:  5,writeData:  5,ALUresult:  5
+# PC: 28,signExtented:    2,Rs:  2,Rt:  0,Rd:  0,content1:  3,content2:  5,read_Data:  5,writeData:  5,ALUresult:  5
+# PC: 29,signExtented:    x,Rs:  x,Rt:  x,Rd:  x,content1:  x,content2:  x,read_Data:  5,writeData:  x,ALUresult:  x
+# PC:  x,signExtented:    x,Rs:  x,Rt:  x,Rd:  x,content1:  x,content2:  x,read_Data:  5,writeData:  x,ALUresult:  x

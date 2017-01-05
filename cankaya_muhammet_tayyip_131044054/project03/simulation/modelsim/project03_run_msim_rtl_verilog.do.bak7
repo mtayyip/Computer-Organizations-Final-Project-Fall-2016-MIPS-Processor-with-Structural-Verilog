@@ -1,0 +1,15 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 {C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v}
+

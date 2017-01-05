@@ -1,0 +1,33 @@
+module ALU_testbench();
+
+reg [31:0]input1;
+reg [31:0]input2;
+reg [2:0]AluControl;
+wire zero;
+wire overflow;
+wire carryOut;
+wire [31:0]result;
+
+
+ALU foo(result,zero,overflow,carryOut,input1,input2,AluControl);
+
+initial begin 
+	input1=32'b00000000000000000000000000001111; input2=32'b00000000000000000000000000000101; AluControl=3'b000;
+	#20;
+	input1=32'b00000000000000000000000000001111; input2=32'b00000000000000000000000000000101; AluControl=3'b001;
+	#20;
+	input1=32'b00000000000000000000000000001111; input2=32'b00000000000000000000000000000101; AluControl=3'b010;
+	#20;
+	input1=32'b00000000000000000000000000000001; input2=32'b00000000000000000000000000000101; AluControl=3'b110;
+	#20;
+	input1=32'b00000000000000000000000000001111; input2=32'b00000000000000000000000000000101; AluControl=3'b111;
+	#20;
+	
+end
+
+initial begin 
+	$monitor("input1 : %32b, input2 : %32b, result %32b,  result %5d", input1,input2,result, result);
+end
+
+
+endmodule 

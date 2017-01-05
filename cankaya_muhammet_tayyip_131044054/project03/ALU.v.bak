@@ -1,0 +1,38 @@
+module ALU(result,zero,overflow,carryOut,input1,input2,AluControl);
+
+input [31:0]input1;
+input [31:0]input2;
+input [2:0]AluControl;
+output zero;
+output overflow;
+output carryOut;
+output [31:0]result;
+
+parameter And = 3'b000;
+parameter Or =  3'b001;
+parameter Add = 3'b010;
+parameter Sub = 3'b110;
+parameter Slt = 3'b111;
+
+wire [31:0]resultAnd;
+wire [31:0]resultOr;
+wire [31:0]resultAdd;
+wire [31:0]resultSub;
+wire [31:0]resultSlt;
+wire [31:0] TwosCompInput2;
+
+
+assign TwosCompInput2=(~input2)+1'b1;
+assign resultAnd = input1 & input2;
+assign resultOr  = input1 | input2;
+assign resultAdd = input1 + input2;
+assign resultSub = input1 - input2;
+assign resultSlt = 32'b00000000000000000000000000000000 + (input1 < input2 ? 1 :0) ;
+//assign resultSub = resultSlt==32'b00000000000000000000000000000001 ? input1+TwosCompInput2 :(input1 - input2);
+
+assign result = AluControl == And ? resultAnd :
+					 AluControl == Or  ? resultOr  :
+					 AluControl == Add ? resultAdd :
+					 AluControl == Sub ? resultSub :
+					 AluControl == Slt ? resultSlt :32'bx;
+endmodul

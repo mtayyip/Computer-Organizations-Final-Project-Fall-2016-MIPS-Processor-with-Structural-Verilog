@@ -1,0 +1,15 @@
+module PCUnit(output1,clock);
+
+output reg[7:0] output1;
+input clock;
+
+initial output1=8'b00000000;
+
+always @ (posedge clock)
+begin 
+output1=output1+1;
+end
+
+
+
+endmodule

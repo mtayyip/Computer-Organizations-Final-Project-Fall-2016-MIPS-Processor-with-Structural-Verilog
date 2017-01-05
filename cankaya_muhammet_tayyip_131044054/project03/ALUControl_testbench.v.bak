@@ -1,0 +1,33 @@
+module ALUControl_testbench ();
+
+reg[3:0] ALUOp;
+reg[5:0] Inst;
+wire[2:0] ALUCtr;
+
+
+ALUControl foo(ALUOp,Inst,ALUCtr);
+
+initial begin 
+	ALUOp=4'b0000; Inst=6'b000000;
+	#20;
+	ALUOp=4'b0000; Inst=6'b000000;
+	#20;
+	ALUOp=4'b0001; Inst=6'b000000;
+	#20;
+	ALUOp=4'b0010; Inst=6'b100000;
+	#20;
+	ALUOp=4'b0010; Inst=6'b100010;
+	#20;
+	ALUOp=4'b0010; Inst=6'b100100;
+	#20;
+	ALUOp=4'b0010; Inst=6'b100101;
+	#20;
+	ALUOp=4'b0010; Inst=6'b101010;
+	#20;	
+end
+
+initial begin 
+	$monitor("ALUop : %4b, Inst : %6b, ALUCtr %3b", ALUop,Inst,ALUCtr);
+end
+
+endmodule

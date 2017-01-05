@@ -1,0 +1,185 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Muhammet\Desktop\cankaya_muhammet_tayyip_131044054\project03\simulation\modelsim
+vALU
+IN343J=]BSFcg4T0Kbi@F?2
+V4Nl7HJES1=A86LE9B<4?F0
+Z1 dC:\Users\Muhammet\Desktop\cankaya_muhammet_tayyip_131044054\project03\simulation\modelsim
+w1483212188
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03 -O0
+n@a@l@u
+!i10b 1
+!s100 hla@8n^AS4F@<M^fzR]O;2
+!s85 0
+!s108 1483212473.932000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALU.v|
+!s101 -O0
+vALUControl
+I<nzJJ0UzgnPkkUNJb=W=23
+VSXY?8O9_hA?[M5VRh1X7E2
+R1
+w1483212292
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@a@l@u@control
+!i10b 1
+!s100 `3bEZMAWinlj31YIfg?]L1
+!s85 0
+!s108 1483212474.323000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ALUControl.v|
+!s101 -O0
+vControlUnit
+I:ZVCLXReUeM]_0zYfKB=T2
+VimLo:68baSc79Wd?O6[DC2
+R1
+w1483196779
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@control@unit
+!i10b 1
+!s100 SgQN@6Tk2UP^iIdTdkW^82
+!s85 0
+!s108 1483212474.752000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/ControlUnit.v|
+!s101 -O0
+vmips_core
+INh3ZBhYQhOD`>W5ZIS;5j2
+V]5e]5Fm_HE?Q43[W4<FWn3
+R1
+w1483209034
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ^73B:_K<f3XeP8AfF:i5:2
+!s85 0
+!s108 1483212476.471000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_core.v|
+!s101 -O0
+vmips_data_mem
+I6MTPR[oCTJW>`Bz6<`9fi2
+Vih=zm[>`eQ?JGL4GCb0lV3
+R1
+w1483190064
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v
+L0 1
+R2
+r1
+31
+Z5 o-work work -O0
+!i10b 1
+!s100 z;0=W:KmE^g5:KmPo]C2I1
+!s85 0
+!s108 1483212476.903000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v|
+!s90 -reportprogress|300|-work|work|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_data_mem.v|
+!s101 -O0
+vmips_instr_mem
+IkfUj<4BDo`HcA9cT?m4LY2
+VWI?LDEJ@`5imZY0<6h3QT2
+R1
+w1483087796
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v
+L0 1
+R2
+r1
+31
+R5
+!i10b 1
+!s100 CDIWV7SO7iB9BoX>aHO9T2
+!s85 0
+!s108 1483212478.620000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v|
+!s90 -reportprogress|300|-work|work|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_instr_mem.v|
+!s101 -O0
+vmips_registers
+Ig??mLA;TOJ<hF;1^HfbkZ1
+VIKjnY3G]3R=R@`]J?b;XX0
+R1
+w1483008186
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v
+L0 1
+R2
+r1
+31
+R5
+!i10b 1
+!s100 Q8Z;=]5R0m;IDW[1Hk05D2
+!s85 0
+!s108 1483212480.346000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v|
+!s90 -reportprogress|300|-work|work|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_registers.v|
+!s101 -O0
+vmips_testbench
+I;:CbDPiIfC>`87LWBh^je1
+Vf2]IUD=7[>X:I4<2Q=7YA2
+R1
+w1483211960
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v
+L0 1
+R2
+r1
+31
+R5
+!i10b 1
+!s100 dm2ITfYH;d1VeSFRdS1=i2
+!s85 0
+!s108 1483212480.777000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v|
+!s90 -reportprogress|300|-work|work|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/mips_testbench.v|
+!s101 -O0
+vPCUnit
+!i10b 1
+!s100 @]]mbdDgi_4>fCW6EiD=g2
+IfPQN@ZnC?6E6mFS]S?nic2
+VEXbHC9PV<nIKm4_:``ddZ1
+R1
+w1483115203
+8C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+FC:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1483212481.143000
+!s107 C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03|-O0|C:/Users/Muhammet/Desktop/cankaya_muhammet_tayyip_131044054/project03/PCUnit.v|
+!s101 -O0
+R3
+R4
+n@p@c@unit

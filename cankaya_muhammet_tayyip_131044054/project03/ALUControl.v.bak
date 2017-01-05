@@ -1,0 +1,14 @@
+module ALUControl(ALUOp,Inst,ALUCtr);
+
+input[3:0] ALUOp;
+input[5:0] Inst;
+output[2:0] ALUCtr;
+
+assign ALUCtr = (ALUOp == 4'b0000)  ? 010 :
+					 (ALUOp == 4'b0001)  ? 110 :
+					 (ALUOp == 4'b0010 && Inst==6'b100000) ? 010 :
+					 (ALUOp == 4'b0010 && Inst==6'b100010) ? 110 :
+					 (ALUOp == 4'b0010 && Inst==6'b100100) ? 000 :
+					 (ALUOp == 4'b0010 && Inst==6'b100101) ? 001 :
+					 (ALUOp == 4'b0010 && Inst==6'b101010) ? 111 :32'bx;
+endmodule

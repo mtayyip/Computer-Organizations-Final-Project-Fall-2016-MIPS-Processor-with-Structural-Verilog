@@ -1,0 +1,26 @@
+module ControlUnit(RegDst,Branch,MemRead,MemtoReg,ALUOp,MemWrite,ALUSrc,RegWrite,Instr);
+
+input [5:0] Instr;
+output RegDst;
+output Branch;
+output MemRead;
+output MemtoReg; 
+output [3:0] ALUOp;
+output MemWrite;
+output ALUSrc;
+output RegWrite;
+
+
+assign RegDst   =  Instr == 6'b000000 ? 1 : 0;
+assign ALUSrc   = (Instr == 6'b100011 || Instr == 6'b101011) ? 1 : 0;
+assign MemtoReg =  Instr == 6'b100011 ? 1 : 0;
+assign RegWrite = (Instr == 6'b000000 || Instr == 6'b100011) ? 1 : 0;
+assign MemRead  =  Instr == 6'b100011 ? 1 : 0;
+assign MemWrite =  Instr == 6'b101011 ? 1 : 0;
+assign Branch   =  Instr == 6'b000100 ? 1 : 0;
+assign ALUOp[3] = (Instr == 6'b000000 || Instr==6'b100011 || Instr==6'b101011 || Instr==6'b000100)? 0 : 1;
+assign ALUOp[2] = (Instr == 6'b000000 || Instr==6'b100011 || Instr==6'b101011 || Instr==6'b000100)? 0 : 1;
+assign ALUOp[1] =  Instr == 6'b000000 ? 1 : 0;
+assign ALUOp[0] =  Instr ==6'b000100  ? 1 : 0;
+
+endmodule
